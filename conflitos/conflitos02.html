@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitando conflitos</title>   
+
+ 
+</head>
+<body>
+    <h1 id="titulo">Evitando conflitos - Segundo Exemplo</h1>
+    <img src="hcode.png" alt="Logo HCode">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    
+    <script>
+        function initPage() {
+            alert('Minha página carregou');
+            console.log('Página OK');
+        }
+
+        function stylizedTitle() {
+            document.getElementById('titulo').style.color = 'red';
+        }
+        // window.onload = initPage(), stylizedTitle();
+        // window.onload = initPage(), stylizedTitle(); - Nesse caso o window.onload não chamará 2 funções, dando um erro gigante.
+        // Vamos comentar a linha do window.onload e resolver com jQuery
+        $(document).ready(function(){
+            initPage();
+            stylizedTitle();
+        });
+        // Resolvido
+    </script>
+</body>
+</html>

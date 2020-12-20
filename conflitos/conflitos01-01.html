@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitando conflitos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+
+    <script>       
+        // Vamos melhorar com window.onload mas ainda não é a opção correta
+
+        /* window.onload = function() {
+            document.getElementById('titulo').style.color = 'red';
+        } */ 
+
+        // Funcionou porém se carregarmos uma imagem grande a font só irá mudar a cor após o carregamento, fica mei esquisito para o usuário
+        // Tivemos que esperar um pouco e do nada o elemento <h1> muda, é estranho.
+        // vamos comentar o window.onload acima e resolver com o jQuery
+        $(document).ready(function(){
+            document.getElementById('titulo').style.color = 'red';
+        });
+        // O jQuery já aplica o red no H1 - ficou melhor
+        // A melhor maneira de carregar o jQuery ou o JS é carregar as scripts antes do fechamento da tag body
+    </script>  
+</head>
+<body>
+    <h1 id="titulo">Evitando conflitos - Primeiro Exemplo</h1>
+    <img src="hcode.png" alt="Logo HCode">
+    
+</body>
+</html>

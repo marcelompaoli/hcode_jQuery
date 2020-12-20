@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Eventos de Teclado</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="logo">
+                        <img src="assets/img/logo-hcode.svg" alt="Logo da Hcode">
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8 title">
+                    <h1>Eventos no jQuery</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            
+
+            <div class="row formulario">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="text-center register"><u>Formulário de Cadastro</u></h3>
+                    <form id="form_key">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="form_username">Tecla </label>
+                                    <input type="text" class="form-control" name="key" id="form_username" placeholder="Clique aqui e Aperte uma Tecla">
+                                </div>
+                            </div>                            
+                        </div>               
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="key_cod_down">Teclas Acionadas KEYDOWN</label>
+                                    <textarea name="key_cod_down" id="key_cod_down" cols="20" rows="1" class="form-control"></textarea>
+                                    <label for="key_cod_press">Teclas Acionadas KEYPRESS</label>
+                                    <textarea name="key_cod_press" id="key_cod_press" cols="20" rows="1" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Hcode Treinamentos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script>    
+        $(document).ready(function(){
+            // https://api.jquery.com/category/events/keyboard-events/
+            // Eventos de Teclado
+            // .keydown() - quando precionamos uma tecla
+            $('#form_key [name=key]').keydown(function(event){
+                $('#form_key [name=key_cod_down]').val(' ');
+                $('#form_key [name=key_cod_press]').val(' ');
+                $('#form_key [name=key_cod_down]').val(`KEYDOWN: ${event.keyCode}`).css('color', 'red');             
+            });
+            $('#form_key [name=key]').keypress(function(event){                
+                $('#form_key [name=key_cod_press]').val(`KEYPRESS: ${event.keyCode}`).css('color', 'blue');             
+            });
+            
+
+        });
+    </script>
+</body>
+</html>

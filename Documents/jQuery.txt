@@ -1,0 +1,61 @@
+/****** jQuery ******/
+/** História do jQuery **/
+https://jquery.org/history/
+/** Download - CDNs **/
+https://jquery.com/download/#using-jquery-with-a-cdn
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+/** Download vi Link direto **/
+https://code.jquery.com/jquery-3.5.1.min.js
+https://code.jquery.com/jquery-3.5.1.js
+
+/** Doanload via NPM and Yarn**/
+https://jquery.com/download/#downloading-jquery-using-npm-or-yarn
+https://www.npmjs.com/package/jquery
+https://classic.yarnpkg.com/en/package/jquery
+
+/* Via NPM */
+npm init -y
+npm install jquery
+
+/* Via Yarn*/
+yarn add jquery
+
+/* Instalando o Express */
+npm install express@4.17.1 -y
+
+/* Instalando o Cors - Acesso de informações no servidor */
+npm install cors@2.8.5
+
+/* Instalando Banco de dados nedb para o jQuery */
+npm install nedb1.8.0
+
+/* Cliente de Rest API - Insomnia */
+https://insomnia.rest/
+
+/* Instalando Nodemon */
+npm install nodemon -g
+
+/* startando o server */
+node server
+*** ou melhor ainda com o nodemon **
+nodemon server
+
+/* Iniciando e configurando o projeto select2
+npm init -y
+npm install jquery bootstrap select2 --save-dev
+
+/* Instalando body-parser */
+npm install body-parser
+
+/* CORS - Módulo para utilizar o AJAX no jQuery para liberar o acesso das portas (3000 Localhost e 550 Ajax) */
+npm install cors
+
+/* Veja os scripts no package.json */
+/* Para rodar agora podemos digitar 'npm run dev'(nodemon server) ou 'npm run start'(node server) */
+
+/* Site para padrões de LOADING */
+/* loading.io/css/  */
+
+/* API de estados e cidades IBGE */
+https://servicodados.ibge.gov.br/api/docs/localidades

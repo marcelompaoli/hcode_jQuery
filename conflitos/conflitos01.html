@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitando conflitos</title>
+
+    <script>        
+        document.getElementById('titulo').style.color = 'red';
+        // Neste exemplo gera um erro no console pois ainda não carregou o H1 do documento
+        // Não devemos definir a tag script no head
+    </script>  
+</head>
+<body>
+    <h1 id="titulo">Evitando conflitos - Primeiro Exemplo </h1>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

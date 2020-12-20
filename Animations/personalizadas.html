@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Animações Personalizadas</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="logo">
+                            <img src="assets/img/logo-hcode.svg" alt="Logo da Hcode">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-xs-12 title">
+                        <h1>Animações no jQuery</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <h2>Cursos Hcode</h2>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <button class="btn btn-success" id="init_effect">Iniciar animação</button>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <button class="btn btn-danger" id="stop_effect">Parar a animação</button>
+                    </div>
+                </div>
+
+                <div class="row courses_list">
+                    <div class="col-sm-4 col-md-4 col-xs-12 course_item">
+                        <div class="course_item_inner">
+                            <img src="assets/img/php_course.png" alt="Curso de PHP 7">
+                            <h4>Curso de PHP 7</h4>
+                        </div>
+                        <button class="text-center btn btn_toggle_item" style="margin-top: 20px;">Ocultar/Exibir item</button>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-xs-12 course_item">
+                        <div class="course_item_inner">
+                            <img src="assets/img/mysql_course.png" alt="Curso de MySQL">
+                            <h4>Curso de MySQL</h4>
+                        </div>
+                        <button class="text-center btn btn_toggle_item" style="margin-top: 20px;">Ocultar/Exibir item</button>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-xs-12 course_item">
+                        <div class="course_item_inner">
+                            <img src="assets/img/html5_course.png" alt="Curso de Web Fundamentos">
+                            <h4>Curso de Web Fundamentos</h4>
+                        </div>
+                        <button class="text-center btn btn_toggle_item" style="margin-top: 20px;">Ocultar/Exibir item</button>
+                    </div>                
+                </div>
+
+                <div class="row courses_list">
+                    <div class="col-sm-4 col-md-4 col-xs-12 course_item">
+                        <div class="course_item_inner">
+                            <img src="assets/img/js_course.png" alt="Curso de JavaScript">
+                            <h4>Curso de JavaScript</h4>
+                        </div>
+                        <button class="text-center btn btn_toggle_item" style="margin-top: 20px;">Ocultar/Exibir item</button>
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-xs-12 course_item">
+                        <div class="course_item_inner">
+                            <img src="assets/img/node_course.png" alt="Curso de Node">
+                            <h4>Curso de Node.js</h4>
+                        </div>
+                        <button class="text-center btn btn_toggle_item" style="margin-top: 20px;">Ocultar/Exibir item</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>Hcode Treinamentos. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            $(document).ready(function(){
+                // https://www.w3schools.com/jquery/eff_animate.asp
+                // Animações Personalizadas - animate()
+                // Animate não aceita cores, apenas valores numéricos
+                
+                $('h1').animate({
+                    fontSize: '50px', // Para o JS devemos usar CamelCase nas chamadas CSS                   
+                }, 3000);
+            
+                /* $('.course_item h4').on('click', function(){
+                    $(this).animate({
+                        wordSpacing: '+=5px'
+                    }, 500);
+                }); */
+
+                $('.course_item').on('click', function(){
+                    $(this).animate({
+                        padding: '+=20px'
+                    }, 1500);
+                });
+
+                $('footer p').on('click', function(){
+                    $(this).animate({
+                        letterSpacing: '+=10px'
+                    }, 1500, function(){ // Função de CallBack
+                        alert('Aumentou o espaçamento das Letras');
+                    });
+                });
+
+            });
+            
+        </script>
+    </body>
+</html>

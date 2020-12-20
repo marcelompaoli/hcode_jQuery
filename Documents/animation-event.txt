@@ -1,0 +1,5 @@
+this.$elevator.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
+
+    
+
+});
