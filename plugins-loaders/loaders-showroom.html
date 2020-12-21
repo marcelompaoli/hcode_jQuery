@@ -12,10 +12,9 @@
 <body>
     <div class="container">
         <h1 class="my-4 ml-4 h2">Loaders Showroom</h1>
-        <form action="">
+        <form action="" id="form-lds">
             <div class="row ml-4">
                 <div class="col-6">
-                    
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-circle">
@@ -29,17 +28,31 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-default">
-                                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
-                        <input type="radio" name="loader" id="lds-default" class="form-check-input" value="default">
+                        <input type="radio" name="loader" id="lds-default" class="form-check-input" value="default" checked>
                         <label for="lds-default" class="form-check-label">Default</label>
                     </div>
 
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-ellipsis">
-                                <div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-ellipsis" class="form-check-input" value="ellipsis">
@@ -50,7 +63,9 @@
                         <div class="loaders-icons-scale">
                             <div class="loaders-icons-scale" style="transform: scale(1, 1);">
                                 <div class="lds-facebook">
-                                    <div></div><div></div><div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +75,15 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-grid">
-                                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-grid" class="form-check-input" value="grid">
@@ -89,7 +112,10 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-ring">
-                                <div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-ring" class="form-check-input" value="ring">
@@ -98,7 +124,7 @@
 
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
-                            <div class="lds-dual-ring">                                
+                            <div class="lds-dual-ring">
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-dual-ring" class="form-check-input" value="dual-ring">
@@ -108,7 +134,8 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale" style="transform: scale(.4, .4);">
                             <div class="lds-ripple">
-                                <div></div><div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-ripple" class="form-check-input" value="ripple">
@@ -118,7 +145,14 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-roller">
-                                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-roller" class="form-check-input" value="roller">
@@ -128,7 +162,18 @@
                     <div class="form-check my-3">
                         <div class="loaders-icons-scale">
                             <div class="lds-spinner">
-                                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <input type="radio" name="loader" id="lds-spinner" class="form-check-input" value="spinner">
@@ -152,23 +197,59 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="assets/js/loaders.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            
-            let radioChoice = 'f';
+        $(document).ready(function() {
 
-            /* if ($('[type=radio]').prop('checked') === true) {
-            radioChoice = $('[type=radio]').value();
-            console.log(radioChoice);
-            }*/
+            let radioChoice = 'default';
+            let divQtd = 12;
 
+            $('#form-lds [type=radio]').on('change', function(event) {
+                radioChoice = $("#form-lds input[type='radio']:checked").val();
 
-            $('[type=submit]').on('click', e => {                
+                switch (`${radioChoice}`) {
+                    case 'circle':
+                    case 'heart':
+                        divQtd = 1;
+                        break;
+                    case 'default':
+                    case 'spinner':
+                        divQtd = 12;
+                        break;
+                    case 'ellipsis':
+                    case 'ring':
+                        divQtd = 4;
+                        break;
+                    case 'dual-ring':
+                        divQtd = 0;
+                        break;
+                    case 'facebook':
+                        divQtd = 3;
+                        break;
+                    case 'grid':
+                        divQtd = 9;
+                        break;
+                    case 'ripple':
+                        divQtd = 2;
+                        break;
+                    case 'roller':
+                        divQtd = 8;
+                        break;
+                    default:
+                        divQtd = 12;
+                }
+            });
 
+            $('[type=submit]').on('click', e => {
                 e.preventDefault();
                 $('body').load("load", {
-                    divClass: 'spinner',
-                    divQtd: 12
+                    divClass: `${radioChoice}`,
+                    divQtd: divQtd
                 });
+            });
+
+            $(document).keyup(function(e) {
+                if (e.keyCode == 27) { //escape key
+                    window.location.reload();
+                }
             });
 
         });

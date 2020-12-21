@@ -1,17 +1,17 @@
-(function($){
+(function($) {
 
     $.fn.load = function(action = 'load', params) {
 
         let defaults = {
             divClass: 'default',
-            divQtd: 12       
+            divQtd: 12
         }
 
         let options = $.extend(defaults, params);
 
         return this.each(function() {
 
-            switch(action) {
+            switch (action) {
                 case 'load':
 
                     let divToAppend = document.createElement('div');
@@ -35,23 +35,23 @@
                         transform: "scale(1, 1)" /* Only to Change the size */
                     });
 
-                    for(let i = 1; i <= options.divQtd; i++) {
+                    for (let i = 1; i <= options.divQtd; i++) {
                         $(divLoad).append('<div></div>');
                     }
 
                     $(divToAppend).append(divLoad);
                     $(this).append(divToAppend).hide().fadeIn('slow');
-                break;
+                    break;
 
                 case 'unload':
-                    $('#loader').fadeOut(function(){
+                    $('#loader').fadeOut(function() {
                         $(this).remove();
                     });
-                break;
+                    break;
 
                 default:
                     console.error('Informe uma ação válida');
-            }            
+            }
         });
     }
 })(jQuery);
